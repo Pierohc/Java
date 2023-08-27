@@ -4,37 +4,58 @@
 
 //CLASE_TIPODATO   nombre_propio = new CONSTRUCTOR
 
-//getter <- Obtener 
+//getter <- para poder imprimir, te da el dato  
 
-//setter <- Para colocar
+//setter <- Para asignar un valor o string
 
 -----
 
 String:
 
-getNombre()
-
-setNombre()
+                    public String getNombre()
+                    
+                    public void setNombre(String nombre)
 
 --------
 Int:
 
-getNumero()
-
-setNumero()
+                    public int getNumero()
+                    
+                    public void setNumero(int edad)
 
 -------
 
 Boolean:
 
-isOpcion1()
-
-setOpcion1()
+                    public boolean isOpcion1()
+                    
+                    public void setOpcion1(boolean opcion)
 
 --------------
-LEER DATOS
+LEER DATOS:
+
+System.in para ingresar datos con el teclado.
+
+scanner.nextLine() posiciona el cursos hasta que el usuario ingrese un dato y presione un enter, ese dato se guarda en una variable.
+
+Recordar quitar el "ln" al println para que el cursor no este en la siguiente linea.
 
           Libreria: import java.util.Scanner;
           
           Scanner lector1 = new Scanner(System.in);
+          String datoIngresado = scanner.nextLine();
+
+Scanner todo lo guarda como String.
+Si queremos ingresar un numero y luego convertirlo a entero:
+
+                    int numero = Integer.parseInt(numeroString);
+
+-----------------
+CONDICIONALES:
+
+if(opcion.equals("texto")){... Si el dato es String
+
+if(opcion == 1){... Si el dato es Int
+
+
 
