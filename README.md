@@ -42,7 +42,7 @@ Recordar quitar el "ln" al println para que el cursor no este en la siguiente li
 
           Libreria: import java.util.Scanner;
           
-          Scanner lector1 = new Scanner(System.in);
+          Scanner scanner = new Scanner(System.in); //creas un scanner que lo puede usar en todo el codigo
           String datoIngresado = scanner.nextLine();
 
 Scanner todo lo guarda como String.
@@ -50,12 +50,22 @@ Si queremos ingresar un numero y luego convertirlo a entero:
 
                     int numero = Integer.parseInt(numeroString);
 
+Si queremos convertir un True o False:
+                    int opcion = Boolean.parse
+
 -----------------
 CONDICIONALES:
+y = &&
+o = ||
 
-if(opcion.equals("texto")){... Si el dato es String
+Si el dato es String:
 
-if(opcion == 1){... Si el dato es Int
+    if(opcion.equals("texto")){
+    }
+Si el dato es Int, para numeros:
+
+    if(opcion == 1){
+    }
 
 
 
