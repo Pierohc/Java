@@ -67,5 +67,11 @@ Si el dato es Int, para numeros:
     if(opcion == 1){
     }
 
+Si una clase esta vacia:
+
+    if(albergue.getGato1() == null){
+    albergue.setGato1(gato);
+    }
+
 
 
