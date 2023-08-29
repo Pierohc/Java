@@ -74,4 +74,72 @@ Si una clase esta vacia:
     }
 
 
+----------------------
+
+Math.PI
+
+-----------------
+
+public final int num = 5 <- atributo que no se puede cambiar, valor fijo.
+
+----------------
+
+Si un metodo a su vez es una clase:
+
+Agregar un valor:
+
+    firulais.getGalleta().setIngredientePrincipan("carne");
+
+Retornar un valor:
+
+    firulais.getGalleta().getMarca()
+
+
+----------------------------
+Ternario para asignaciones:
+
+    int total = 20
+    total = num > 6 ? 40 : 10;
+
+Reemplaza a:
+
+    if(num>6){
+     total = 40;
+    }else{
+      total = 10;
+    }
+
+------------------------------
+
+break para while si usamos switch:
+  
+    buclePrincipal:
+
+        switch{
+          case 1:
+            break;
+          case2:
+            break;
+    
+          case 3:
+            breack bucle Principal;
+
+
+---------------------------------
+While:
+
+    while(i<10){
+      i++; 
+      }
+For:
+
+    for(int i=1; i <=10; i++){
+
+    }
+        
+
+
+
+
+
 
