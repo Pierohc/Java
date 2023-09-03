@@ -8,31 +8,9 @@
 
 //setter <- Para asignar un valor o string
 
------
-
-String:
-
-                    public String getNombre()
-                    
-                    public void setNombre(String nombre)
-
---------
-Int:
-
-                    public int getNumero()
-                    
-                    public void setNumero(int edad)
-
--------
-
-Boolean:
-
-                    public boolean isOpcion1()
-                    
-                    public void setOpcion1(boolean opcion)
 
 --------------
-LEER DATOS:
+# LEER DATOS:
 
 System.in para ingresar datos con el teclado.
 
@@ -52,6 +30,21 @@ Si queremos ingresar un numero y luego convertirlo a entero:
 
 Si queremos convertir un True o False:
                     int opcion = Boolean.parse
+
+# Problema con nextInt():
+            System.out.printf("Seleccione una opción: ");
+            int opcion = scanner.nextInt();
+            
+en este caso sabemos que lo que se va a ingresar será un número y al hacer uso del next.Int(), escribiremos el numero y daremos enter para ingresar el dato; sin embargo, cuando intentas leer una cadena con scanner.nextLine() después del nextInt(), el nextLine() consume la línea en blanco (Enter) dejada por la entrada anterior en lugar de esperar una entrada real de texto.
+
+Para solucionar este problema, puedes agregar un scanner.nextLine() adicional justo después de leer el número para consumir el carácter de nueva línea antes de leer la cadena. . Para ello si lo siguiente que queremos hacer es ingresar de nuevo un dato, deberemos colocar un scanner.nextLine():
+
+            System.out.println("Ingrese el nombre del producto que dese actualizar: " );
+            scanner.nextLine();
+            String productoActualizar = scanner.nextLine();
+
+
+
 
 -----------------
 CONDICIONALES:
