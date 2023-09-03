@@ -193,3 +193,16 @@ Libreria para usar Array(herramiento para manejar arreglos):
 
 ![aaa](https://github.com/Pierohc/Java/assets/133154904/bf309d40-896b-4e9f-a08e-96793a0973c2)
 
+------------------------------------
+# Funcion Split:
+
+        String correo = "a20200814@pucp.edu.pe";
+        String partes[] = correo.split("@");
+
+        System.out.println(partes[0]); //Imprimir solo un elemento del arreglo
+
+        for (String eachPart : partes){ //Imprimir todo el arreglo
+            System.out.println(eachPart);
+        }
+
+
