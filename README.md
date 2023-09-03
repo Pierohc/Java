@@ -104,19 +104,25 @@ Reemplaza a:
 
 ------------------------------
 
-break para while si usamos switch:
+# break para while si usamos switch:
   
     buclePrincipal:
 
+    while (true){
+
         switch{
+        
           case 1:
             break;
+            
           case2:
             break;
-    
+            
           case 3:
-            breack bucle Principal;
-
+            breack buclePrincipal; //Finaliza todo el bucle while
+            
+         }
+     }
 
 ---------------------------------
 # While:
