@@ -227,4 +227,11 @@ Libreria para usar Array(herramiento para manejar arreglos):
             System.out.println(eachPart);
         }
 
+------------------------------------
+# Verificar si una clase está vacía:
+
+          if (nuevoEstudiante.getComputadora() == null){
+              System.out.println("compu vacia");
+          }
+
 
