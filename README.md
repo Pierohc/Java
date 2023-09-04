@@ -234,4 +234,30 @@ Libreria para usar Array(herramiento para manejar arreglos):
               System.out.println("compu vacia");
           }
 
+---------------------------
+# Public static void:
+Un método estático en Java es un método que pertenece a una clase en lugar de pertenecer a una instancia específica de esa clase. Puedes llamar a un método estático directamente desde la clase sin necesidad de crear un objeto de la clase. Aquí tienes una explicación simple y un ejemplo:
+
+Supongamos que tienes una clase llamada `Matematicas` con un método estático que suma dos números:
+
+```java
+public class Matematicas {
+    public static int sumar(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+En este ejemplo, `sumar` es un método estático de la clase `Matematicas`. Puedes llamar a este método sin crear un objeto `Matematicas`:
+
+```java
+int resultado = Matematicas.sumar(5, 3);
+System.out.println("La suma es: " + resultado);
+```
+
+No necesitas crear una instancia de `Matematicas` para usar `sumar`. Simplemente usas el nombre de la clase seguido del nombre del método estático para realizar la suma.
+
+Los métodos estáticos son útiles para operaciones que no dependen del estado de un objeto específico y se pueden utilizar en situaciones en las que no es necesario crear una instancia de la clase. Se utilizan comúnmente en utilidades matemáticas, funciones de utilidad y métodos de fábrica en clases de utilidad.
+
+
 
