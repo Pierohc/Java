@@ -44,6 +44,22 @@ Para solucionar este problema, puedes agregar un scanner.nextLine() adicional ju
             String productoActualizar = scanner.nextLine();
 
 
+--------------------
+
+# Una clase dentro de otra clase:
+          
+
+se creo un estudiante dentro de una clase de jerarquia mayor y estudiante que es una clase Estudiante, tiene como atributo computadora y la computadora es de clase Computadora, que es una clase adicional de jerarquia menor que Estudiante, la cual tiene una funcion llamada registro():
+
+
+          Computadora computadora = new Computadora();
+          
+          public void registrarEstudiante(Estudiante estudiante){
+           
+          computadora.registro(); //llamo al registro de la computadora
+          estudiante.setComputadora(computadora); //guardo la informacion de esa computadora en el estudiante
+          System.out.println("El precio es: " + estudiante.getComputadora().getPrecio());
+
 
 
 -----------------
