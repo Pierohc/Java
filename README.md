@@ -259,5 +259,138 @@ No necesitas crear una instancia de `Matematicas` para usar `sumar`. Simplemente
 
 Los métodos estáticos son útiles para operaciones que no dependen del estado de un objeto específico y se pueden utilizar en situaciones en las que no es necesario crear una instancia de la clase. Se utilizan comúnmente en utilidades matemáticas, funciones de utilidad y métodos de fábrica en clases de utilidad.
 
+-----------------------
+
+# HashMap:
+
+          import java.util.HashMap;
+
+Ojo: 
+
+int-> Integer
+
+double -> Double
+
+float -> Float
+
+cadena -> String
+
+Primero se define el tipo de dato de la clave y luego de su valor, lo llamamos hashmap.
+Para este ejemplo se asociaran nombres y edades y se llamara mapaEdades:
+
+          Map<TipoDatoClave, TipoDatoValor> mapaEdades = new HashMap<>();
+          Map<String, Integer> mapaEdades = new HashMap<>();
+
+
+empezamos el mapeo (Agregar elementos):
+
+          mapaEdades.put("Juan", 30);
+          mapaEdades.put("María", 25);
+          mapaEdades.put("Pedro", 40);
+          mapaEdades.put("Ana", 22);
+
+Imprimir u obtener un dato del HashMap (lo unico que se obtienen son los valores):
+
+          int edadJuan = mapaEdades.get("Juan");
+          System.out.println("La edad de Juan es: " + edadJuan);
+
+
+Cantidad de elementos de un HashMap:
+
+          int cantidadElementos = mapaEdades.size();
+          sout("La cantidad de elementos es:" + cantidadElementos);
+
+Maneras de saber si una KEY existe:
+
+
+          boolean existe = mapaEdades.containsKey("Juan")
+          sout(existe) // si existe imprimirá True, sino False
+
+         
+          //OTRA MANERA:
+          
+          String nombre = "María";
+          if (mapaEdades.containsKey(nombre)) {
+            System.out.println(nombre + " está en el mapa.");
+          } else {
+            System.out.println(nombre + " no está en el mapa.");
+          }
+
+
+![image](https://github.com/Pierohc/Java/assets/133154904/f87c5cee-ed3c-4875-9d4d-0cb3a730869f)
+
+-------------------------------------------------
+
+                    import java.util.Map;
+
+```java
+// Iterar a través de todas las claves y valores en el HashMap
+System.out.println("Personas en el mapa:");
+for (Map.Entry<String, Integer> entrada : mapaEdades.entrySet()) {
+    String persona = entrada.getKey();
+    int edad = entrada.getValue();
+    System.out.println(persona + " tiene " + edad + " años.");
+}
+```
+
+Este fragmento de código se utiliza para recorrer (iterar) a través de todos los elementos almacenados en el `HashMap` llamado `mapaEdades` y mostrar sus claves (nombres) y valores (edades) en la consola.
+
+Aquí hay una explicación paso a paso:
+
+1. `mapaEdades.entrySet()`: `entrySet()` es un método de `HashMap` que devuelve un conjunto de objetos `Map.Entry`. Cada `Map.Entry` representa un par clave-valor en el mapa. En este caso, estamos obteniendo un conjunto de todos los pares clave-valor en `mapaEdades`.
+
+2. `for (Map.Entry<String, Integer> entrada : mapaEdades.entrySet())`: Estamos utilizando un bucle `for-each` para iterar a través de cada `Map.Entry` en el conjunto resultante. `Map.Entry<String, Integer>` especifica el tipo de cada elemento en el conjunto: la clave es de tipo `String` y el valor es de tipo `Integer`.
+
+
+-------------------------------------------------
+
+# HashSet:
+          import java.util.HashSet;
+              
+Crear un HashSet de cadenas:
+
+                  HashSet<String> listaFrutas = new HashSet<>();
+          
+Agregar elementos:
+
+                  listaFrutas.add("Manzana");
+                  listaFrutas.add("Banana");
+                  listaFrutas.add("Cereza");
+          
+Intentar agregar un elemento duplicado:
+
+                  set.add("Manzana"); // Esto se ignora, ya que "Manzana" ya está en el conjunto
+          
+Cantidad de elementos:
+
+                  System.out.println("Tamaño del conjunto: " + set.size()); // Salida: 3
+          
+Iterar a través de los elementos:
+
+                  System.out.println("Elementos en el conjunto:");
+                  for (String elemento : set) {
+                      System.out.println(elemento);
+                  }
+
+
+                  
+              }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
 
 
