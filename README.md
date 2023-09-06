@@ -335,27 +335,49 @@ Maneras de saber si una KEY existe:
 
 ![image](https://github.com/Pierohc/Java/assets/133154904/f87c5cee-ed3c-4875-9d4d-0cb3a730869f)
 
--------------------------------------------------
+Recorrer elementos del HashMap:
 
-                    import java.util.Map;
+Puedes recorrer un `HashMap` utilizando el método `keySet()` o `values()`:
+
+1. Recorrer las claves (`keys`) del `HashMap` y luego obtener los valores correspondientes:
 
 ```java
-// Iterar a través de todas las claves y valores en el HashMap
-System.out.println("Personas en el mapa:");
-for (Map.Entry<String, Integer> entrada : mapaEdades.entrySet()) {
-    String persona = entrada.getKey();
-    int edad = entrada.getValue();
-    System.out.println(persona + " tiene " + edad + " años.");
-}
+
+        HashMap<String, Integer> numeros = new HashMap<>();
+        numeros.put("Uno", 1);
+        numeros.put("Dos", 2);
+        numeros.put("Tres", 3);
+
+        // Recorrer las claves y obtener los valores correspondientes
+
+        for (String key : numeros.keySet()) {
+            Integer valor = numeros.get(key);
+            System.out.println("Clave: " + key + ", Valor: " + valor);
+        }
+    
+
 ```
 
-Este fragmento de código se utiliza para recorrer (iterar) a través de todos los elementos almacenados en el `HashMap` llamado `mapaEdades` y mostrar sus claves (nombres) y valores (edades) en la consola.
+2. Recorrer los valores directamente utilizando `values()`:
 
-Aquí hay una explicación paso a paso:
+```java
 
-1. `mapaEdades.entrySet()`: `entrySet()` es un método de `HashMap` que devuelve un conjunto de objetos `Map.Entry`. Cada `Map.Entry` representa un par clave-valor en el mapa. En este caso, estamos obteniendo un conjunto de todos los pares clave-valor en `mapaEdades`.
+        HashMap<String, Integer> numeros = new HashMap<>();
+        numeros.put("Uno", 1);
+        numeros.put("Dos", 2);
+        numeros.put("Tres", 3);
 
-2. `for (Map.Entry<String, Integer> entrada : mapaEdades.entrySet())`: Estamos utilizando un bucle `for-each` para iterar a través de cada `Map.Entry` en el conjunto resultante. `Map.Entry<String, Integer>` especifica el tipo de cada elemento en el conjunto: la clave es de tipo `String` y el valor es de tipo `Integer`.
+        // Recorrer los valores directamente
+
+        for (Integer valor : numeros.values()) {
+            System.out.println("Valor: " + valor);
+        }
+    
+
+```
+
+Ambos enfoques te permiten recorrer un `HashMap` sin necesidad de utilizar `Map.Entry`. Puedes elegir el enfoque que mejor se adapte a tus necesidades según si necesitas acceder tanto a las claves como a los valores o solo a los valores.
+
 
 
 -------------------------------------------------
@@ -419,6 +441,21 @@ Limpiar todo un HashSet:
 
           boolean verificar = listaFrutas.isEmpty();
 
+
+Recorrer elementos de un HashSet:
+
+        HashSet<String> listaFrutas = new HashSet<>();
+        listaFrutas.add("Manzana");
+        listaFrutas.add("Banana");
+        listaFrutas.add("Cereza");
+
+        // Recorrer el HashSet de frutas utilizando un bucle for-each
+        for (String fruta : listaFrutas) {
+            System.out.println("Fruta: " + fruta);
+        }
+  
+
+ 
 
           
 
