@@ -39,9 +39,9 @@ en este caso sabemos que lo que se va a ingresar será un número y al hacer uso
 
 Para solucionar este problema, puedes agregar un scanner.nextLine() adicional justo después de leer el número para consumir el carácter de nueva línea antes de leer la cadena. . Para ello si lo siguiente que queremos hacer es ingresar de nuevo un dato, deberemos colocar un scanner.nextLine():
 
-            System.out.println("Ingrese el nombre del producto que dese actualizar: " );
+            System.out.printf("Seleccione una opción: ");
+            int opcion = scanner.nextInt();
             scanner.nextLine();
-            String productoActualizar = scanner.nextLine();
 
 
 --------------------
