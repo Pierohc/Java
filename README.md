@@ -8,6 +8,16 @@
 
 //setter <- Para asignar un valor o string
 
+# OJO:
+Si se crea un metodo y lleva un parámetro, no se debe crear antes en esa clase, solo se crea en el main. En esa clase si se crea dentro de la funcion:
+
+                    void funcion(Arraylist<Clase1> lista)
+Los HashMap,HashSet y Scanner se crean donde irian los atributos:
+
+          Scanner scanner = new Scanner(System.in);
+          HashSet<String> numeros = new HashSet<>();
+          HashMap<Float,String> usuarioContraseña = new HashMap<>();
+
 
 --------------
 # LEER DATOS:
@@ -320,7 +330,7 @@ Maneras de saber si una KEY existe:
 
 
           boolean existe = mapaEdades.containsKey("Juan")
-          sout(existe) // si existe imprimirá True, sino False
+          sout(existe) // si existe imprimirá "true", sino "false"
 
          
           //OTRA MANERA:
@@ -341,8 +351,6 @@ Puedes recorrer un `HashMap` utilizando el método `keySet()` o `values()`:
 
 1. Recorrer las claves (`keys`) del `HashMap` y luego obtener los valores correspondientes:
 
-```java
-
         HashMap<String, Integer> numeros = new HashMap<>();
         numeros.put("Uno", 1);
         numeros.put("Dos", 2);
@@ -356,11 +364,9 @@ Puedes recorrer un `HashMap` utilizando el método `keySet()` o `values()`:
         }
     
 
-```
+
 
 2. Recorrer los valores directamente utilizando `values()`:
-
-```java
 
         HashMap<String, Integer> numeros = new HashMap<>();
         numeros.put("Uno", 1);
@@ -373,13 +379,6 @@ Puedes recorrer un `HashMap` utilizando el método `keySet()` o `values()`:
             System.out.println("Valor: " + valor);
         }
     
-
-```
-
-Ambos enfoques te permiten recorrer un `HashMap` sin necesidad de utilizar `Map.Entry`. Puedes elegir el enfoque que mejor se adapte a tus necesidades según si necesitas acceder tanto a las claves como a los valores o solo a los valores.
-
-
-
 -------------------------------------------------
 
 # HashSet:
@@ -424,6 +423,7 @@ Verificar si un elemento ya existe o no:
 Otra forma:
 
           boolean existe = listaFrutas.contains("fruta1");
+          //si se imprime existe, imprimirá "true" o "false"
 
 Eliminar un elemento:
 
