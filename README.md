@@ -215,6 +215,22 @@ Libreria para usar Array(herramiento para manejar arreglos):
 
 ![aaa](https://github.com/Pierohc/Java/assets/133154904/bf309d40-896b-4e9f-a08e-96793a0973c2)
 
+
+Imprimir elementos de un Arraylist:
+
+        ArrayList<String> lista = new ArrayList<>();
+        
+        // Agregar elementos a la ArrayList
+        lista.add("Manzana");
+        lista.add("Banana");
+        lista.add("Cereza");
+        
+Usar un bucle foreach para imprimir los elementos
+        
+        for (String elemento : lista) {
+            System.out.println(elemento);
+        }
+
 ------------------------------------
 # Funcion Split:
 
