@@ -275,10 +275,10 @@ float -> Float
 
 cadena -> String
 
-Primero se define el tipo de dato de la clave y luego de su valor, lo llamamos hashmap.
+Primero se define el tipo de dato de la key(clave) y luego de su valor, lo llamamos hashmap.
 Para este ejemplo se asociaran nombres y edades y se llamara mapaEdades:
 
-          Map<TipoDatoClave, TipoDatoValor> mapaEdades = new HashMap<>();
+          Map<TipoDatoKey, TipoDatoValor> mapaEdades = new HashMap<>();
           Map<String, Integer> mapaEdades = new HashMap<>();
 
 
@@ -357,25 +357,55 @@ Agregar elementos:
                   listaFrutas.add("Banana");
                   listaFrutas.add("Cereza");
           
-Intentar agregar un elemento duplicado:
+Verificar si un elemento ya existe o no:
 
-                  set.add("Manzana"); // Esto se ignora, ya que "Manzana" ya está en el conjunto
-          
+
+        HashSet<String> conjunto = new HashSet<>();
+
+        // Agregar elementos al HashSet
+        listaFrutas.add("Manzana");
+        listaFrutas.add("Banana");
+        listaFrutas.add("Cereza");
+
+        // Verificar si un elemento existe en el conjunto
+        String elementoBuscado = "Banana";
+        if (listaFrutas.contains(elementoBuscado)) {
+            System.out.println(elementoBuscado + " existe en el conjunto.");
+        } else {
+            System.out.println(elementoBuscado + " no existe en el conjunto.");
+        }
+
+        // Verificar otro elemento que no está en el conjunto
+        String elementoNoEncontrado = "Uva";
+        if (listaFrutas.contains(elementoNoEncontrado)) {
+            System.out.println(elementoNoEncontrado + " existe en el conjunto.");
+        } else {
+            System.out.println(elementoNoEncontrado + " no existe en el conjunto.");
+        }
+
+Otra forma:
+
+          boolean existe = listaFrutas.contains("fruta1");
+
+Eliminar un elemento:
+
+          listaFrutas.remove("fruta1");
+
 Cantidad de elementos:
 
-                  System.out.println("Tamaño del conjunto: " + set.size()); // Salida: 3
+                  System.out.println("Tamaño del conjunto: " + listaFrutas.size()); // Salida: 3
+
+Limpiar todo un HashSet:
+
+          listaFrutas.clear();
+
+          //verificar si ya está vacío:
+
+          boolean verificar = listaFrutas.isEmpty();
+
+
           
-Iterar a través de los elementos:
 
-                  System.out.println("Elementos en el conjunto:");
-                  for (String elemento : set) {
-                      System.out.println(elemento);
-                  }
-
-
-                  
-              }
-          }
 
 
 
