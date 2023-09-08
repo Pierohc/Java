@@ -19,9 +19,11 @@ Los HashMap,HashSet y Scanner se crean donde irian los atributos:
           HashMap<Float,String> usuarioContraseña = new HashMap<>();
 
 
+## Cuando se use for each, dependiendo el objetivo, será necesario inicializar una variable;
+
 ## Registrar datos sin repetir:
 
-  public void agregarUsuario(Usuario nuevoUsuario){
+    public void agregarUsuario(Usuario nuevoUsuario){
   
           if (listaUsuarios.isEmpty()){
               listaUsuarios.add(nuevoUsuario);
@@ -337,20 +339,7 @@ Esto declara una matriz bidimensional llamada matriz, pero aún no se ha inicial
             // Realiza alguna operación con el valor
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
+    
 --------------------------------------
 
 # ArrayList:
