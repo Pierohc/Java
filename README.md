@@ -19,6 +19,82 @@ Los HashMap,HashSet y Scanner se crean donde irian los atributos:
           HashMap<Float,String> usuarioContraseña = new HashMap<>();
 
 
+## Registrar datos sin repetir:
+
+  public void agregarUsuario(Usuario nuevoUsuario){
+  
+          if (listaUsuarios.isEmpty()){
+              listaUsuarios.add(nuevoUsuario);
+              System.out.println("Usuario registrado con éxito");
+              
+          }else{
+  
+              boolean idEnUso = false; //se inicializa
+              for(Usuario elemento: listaUsuarios ){
+                  if (elemento.getCodigoPUCP().equals(nuevoUsuario.getCodigoPUCP())){
+                      idEnUso = true;
+                      break;
+                  }
+              }
+              
+  
+              if (idEnUso){  //si es true, osea que está en uso
+                  System.out.println("El ID del usuario ya está en uso. Intente con otro.");
+              }else{
+                  listaUsuarios.add(nuevoUsuario);
+                  System.out.println("Usuario registrado con éxito");
+              }
+
+  
+          }
+      }
+----------------------------
+
+# Constructor:
+
+Ejemplo de un constructor sin parámetros:
+
+
+    public class MiClase {
+        private int valor;
+    
+        // Constructor sin parámetros (constructor por defecto)
+        public MiClase() {
+            valor = 0; // Valor inicial predeterminado
+        }
+    
+        // Otros métodos y atributos de la clase...
+    }
+
+
+2. Constructor con parámetros:
+Ejemplo de un constructor con parámetros:
+
+    public class Persona {
+        private String nombre;
+        private int edad;
+    
+        // Constructor con parámetros
+        public Persona(String nombre, int edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+    
+        // Otros métodos y atributos de la clase...
+    }
+
+
+En este ejemplo, la clase `Persona` tiene un constructor con parámetros que permite especificar el nombre y la edad de una persona al crear un objeto de esa clase. Los valores proporcionados como argumentos se utilizan para inicializar los atributos correspondientes.
+
+Para utilizar estos constructores, puedes crear objetos de la clase y llamar al constructor apropiado según tus necesidades:
+
+
+    MiClase objeto1 = new MiClase(); // Constructor sin parámetros
+    Persona persona1 = new Persona("Juan", 30); // Constructor con parámetros
+
+Los constructores sin parámetros proporcionan valores predeterminados, mientras que los constructores con parámetros permiten la personalización de los valores iniciales de los atributos de un objeto.
+
+
 --------------
 # LEER DATOS:
 
@@ -40,6 +116,7 @@ Si queremos ingresar un numero y luego convertirlo a entero:
 
 Si queremos convertir un True o False:
                     int opcion = Boolean.parse
+--------------------------------------------
 
 # Problema con nextInt():
             System.out.printf("Seleccione una opción: ");
@@ -183,7 +260,7 @@ Dar valores:
     
 Conocer tamaño del arreglo:
 
-sout(arreglo.length);
+    sout(arreglo.length);
 
 Imprimir todos los valores:
 
@@ -203,7 +280,7 @@ Longitud multidimensional variable:
 
 ![image](https://github.com/Pierohc/Java/assets/133154904/812486d7-9087-41a8-a486-0fbefebb4e72)
 
-Imprimir matriz: Se necesita un doble for
+## Imprimir matriz: Se necesita un doble for
 
     for(int i=0; i<3;i++){
     
@@ -211,6 +288,69 @@ Imprimir matriz: Se necesita un doble for
         
         }
      }
+
+## Creacion:
+
+    int[][] matriz = new int[3][4];
+En este caso se tienen 3 filas y 4 columnas, tambien se podría declarar solo las filas:
+
+      int[][] matriz = new int[8][];
+Caso contrario no se puede hacer solo declarando columnas;
+
+## Arreglos segun tamaño:
+    int[][] matrizBidimensional;
+    int[][][] matrizTridimensional;
+
+## Longitud de arreglos multidimensionales:
+Puedes obtener la longitud de cada dimensión de un arreglo multidimensional utilizando la propiedad length. Por ejemplo:
+
+    int filas = matriz.length; // Obtiene el número de filas
+    int columnas = matriz[0].length; // Obtiene el numero de columnas asumiendo que todas       las filas tienen la misma cantidad de columnas
+
+## Matriz sin valores:
+    int[][] matriz = null;
+Esto declara una matriz bidimensional llamada matriz, pero aún no se ha inicializado. Puedes asignarle un valor más tarde cuando lo necesites.
+
+## Matriz con valores específicos:
+    int[][] matriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+## Declarar matriz 3x3(ejemplo):
+    estante[0] = new int[]{1, 2, 3};
+    estante[1] = new int[]{4, 5, 10};
+    estante[2] = new int[]{6, 7, 8};
+
+## Darle valores:
+
+    int[][] matriz = new int[3][3];
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz[i].length; j++) {
+            matriz[i][j] = i + j;
+        }
+    }
+
+
+## Obtner valores de una matriz:
+
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz[i].length; j++) {
+            int valor = matriz[i][j];
+            // Realiza alguna operación con el valor
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
 --------------------------------------
 
 # ArrayList:
