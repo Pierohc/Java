@@ -329,7 +329,7 @@ Esto declara una matriz bidimensional llamada matriz, pero aún no se ha inicial
     }
 
 
-## Obtner valores de una matriz:
+## Obtener valores de una matriz:
 
     for (int i = 0; i < matriz.length; i++) {
         for (int j = 0; j < matriz[i].length; j++) {
