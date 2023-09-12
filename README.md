@@ -216,6 +216,11 @@ Ternario para asignaciones:
     int total = 20
     total = num > 6 ? 40 : 10;
 
+
+    System.out.printf("Permite correo? (S/N): ");
+                    String correo = scanner.nextLine();
+                    nuevaVLan.setPermiteCorreo(correo.equals("s")? true:false);
+
 Reemplaza a:
 
     if(num>6){
