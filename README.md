@@ -18,6 +18,21 @@ Los HashMap,HashSet y Scanner se crean donde irian los atributos:
           HashSet<String> numeros = new HashSet<>();
           HashMap<Float,String> usuarioContraseña = new HashMap<>();
 
+## Cuando un ArrayList o Hash es una atributo:
+Getter:
+  Para obtener el arreglo y trabajar con el, incluye:
+
+      isEmpty()
+Setter:
+  Para pasarle un ArrayList o Hash:
+
+      -----.setListaProducto(Lista creada);
+
+Para el add, será necesario crear un metodo nuevo aparte del getter and setter:
+
+    public void agregarProducto( Producto productoNuevo ){
+      listaProductos.add(productoNuevo)
+    }
 
 ## Cuando se use for each, dependiendo el objetivo, será necesario inicializar una variable;
 
