@@ -8,6 +8,8 @@
 
 //setter <- Para asignar un valor o string
 
+--------------------
+
 # OJO:
 Si se crea un metodo y lleva un parámetro, no se debe crear antes en esa clase, solo se crea en el main. En esa clase si se crea dentro de la funcion:
 
@@ -412,9 +414,11 @@ Supongamos que tienes una clase llamada `Matematicas` con un método estático q
 
 ```java
 public class Matematicas {
+
     public static int sumar(int a, int b) {
         return a + b;
     }
+
 }
 ```
 
