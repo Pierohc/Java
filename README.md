@@ -292,6 +292,7 @@ Imprimir todos los valores:
         sout(arreglo[i]);
      }
 
+
 -------------------------------------------
 
 # Arreglo Multidimensional (Matrices):
@@ -303,6 +304,8 @@ Longitud multidimensional constante:
 Longitud multidimensional variable:
 
 ![image](https://github.com/Pierohc/Java/assets/133154904/812486d7-9087-41a8-a486-0fbefebb4e72)
+
+
 
 ## Imprimir matriz: Se necesita un doble for
 
