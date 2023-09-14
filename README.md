@@ -293,6 +293,15 @@ Imprimir todos los valores:
      }
 
 
+
+Se puede decir que con esa declaracion si o si listaLabs es diferente de null?  
+
+    Laboratorio[] listaLabs = new Laboratorio[3]; 
+Sí, con la declaración `Laboratorio[] listaLabs = new Laboratorio[3];`, `listaLabs` definitivamente no será `null`. Esta línea de código crea un nuevo arreglo `listaLabs` de tipo `Laboratorio` con una longitud de 3 elementos y lo inicializa automáticamente con valores `null` para cada elemento.
+
+Por lo tanto, después de esta declaración, puedes estar seguro de que `listaLabs` no es `null`, pero los elementos dentro del arreglo serán `null` hasta que los inicialices explícitamente con objetos `Laboratorio`.
+
+
 -------------------------------------------
 
 # Arreglo Multidimensional (Matrices):
